@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 interface Utility {
@@ -27,11 +29,11 @@ public class Main {
         
         Scanner scanner = new Scanner(System.in);
 
-        Showroom[] showroom = new Showroom[5];
+        List<Showroom> showroom = new ArrayList<>();
 
-        Employees[] employee = new Employees[5];
+        List<Employees> employee = new ArrayList<>();
 
-        Cars[] car = new Cars[5];
+        List<Cars> car = new ArrayList<>();
 
         int car_counter = 0;
 
@@ -51,8 +53,8 @@ public class Main {
                 switch(choice) {
 
                     case 1 :
-                        showroom[showroom_counter] = new Showroom();
-                        showroom[showroom_counter].set_details();
+                        showroom.add(new Showroom());
+                        showroom.get(showroom_counter).set_details();
                         showroom_counter++;
                         System.out.println();
                         System.out.println("1].ADD NEW SHOWROOM");
@@ -61,8 +63,8 @@ public class Main {
                         break;
 
                     case 2 :
-                        employee[employee_counter] = new Employees();
-                        employee[employee_counter].set_details();
+                        employee.add(new Employees());
+                        employee.get(employee_counter).set_details();
                         employee_counter++;
                         System.out.println();
                         System.out.println("2].ADD NEW EMPLOYEE");
@@ -71,8 +73,8 @@ public class Main {
                         break;
 
                     case 3 :
-                        car[car_counter] = new Cars();
-                        car[car_counter].set_details();
+                        car.add(new Cars());
+                        car.get(car_counter).set_details();
                         car_counter++;
                         System.out.println();
                         System.out.println("3].ADD NEW CAR");
@@ -98,6 +100,8 @@ public class Main {
 
                     case 5 :
                         System.out.println("=============================== *** SHOWING EMPLOYEE DETAILS *** ==============================");
+                        System.out.println();
+                        
                         for(Employees emp : employee) {
   
                             emp.get_details();
@@ -113,6 +117,8 @@ public class Main {
 
                     case 6 :
                         System.out.println("================================= *** SHOWING CAR DETAILS *** =================================");
+                        System.out.println();
+
                         for(Cars cr : car) {
 
                             cr.get_details();
