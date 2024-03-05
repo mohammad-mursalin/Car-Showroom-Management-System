@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Cars extends Showroom implements Utility {
+public class Cars extends Showroom {
 
     String car_name;
     String car_color;
@@ -22,7 +22,7 @@ public class Cars extends Showroom implements Utility {
     public void set_details() {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("======================== *** ENTER CAR DETAILS *** ========================");
+        System.out.println("================================== *** ENTER CAR DETAILS *** ==================================");
         System.out.println();
         System.out.print("CAR NAME : ");
         car_name = scanner.nextLine();
@@ -34,6 +34,7 @@ public class Cars extends Showroom implements Utility {
         car_price = scanner.nextInt();
         System.out.print("CAR TYPE (SEDAN/SUX/HATCHBACK) : " );
         car_type = scanner.nextLine();
+        scanner.nextLine();
         System.out.print("TRANSMISSION TYPE (AUTOMATIC/MANUAL) : ");
         car_transmission = scanner.nextLine();
     }

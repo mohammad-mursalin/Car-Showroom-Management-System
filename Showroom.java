@@ -21,7 +21,7 @@ public class Showroom implements Utility {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("======================== *** ENTER SHOWROOM DETAILS *** ========================");
+        System.out.println("=============================== *** ENTER SHOWROOM DETAILS *** ================================");
         System.out.println();
         System.out.print("SHOWROOM NAME : ");
         showroom_name = scanner.nextLine();

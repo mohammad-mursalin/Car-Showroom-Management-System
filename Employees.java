@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.UUID;
 
-public class Employees extends Showroom implements Utility {
+public class Employees extends Showroom {
 
     String emp_id;
     String emp_name;
@@ -21,7 +21,8 @@ public class Employees extends Showroom implements Utility {
 
         Scanner scanner = new Scanner(System.in);
         UUID uuid = UUID.randomUUID();
-        System.out.println("======================== *** ENTER EMPLOYEE DETAILS *** ========================");
+        emp_id = String.valueOf(uuid);
+        System.out.println("================================ *** ENTER EMPLOYEE DETAILS *** ================================");
         System.out.println();
         System.out.print("EMPLOYEE NAME : ");
         emp_name = scanner.nextLine();
