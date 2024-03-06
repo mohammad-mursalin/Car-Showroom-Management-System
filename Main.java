@@ -53,6 +53,7 @@ public class Main {
                 switch(choice) {
 
                     case 1 :
+
                         showroom.add(new Showroom());
                         showroom.get(showroom_counter).set_details();
                         showroom_counter++;
@@ -63,6 +64,7 @@ public class Main {
                         break;
 
                     case 2 :
+
                         employee.add(new Employees());
                         employee.get(employee_counter).set_details();
                         employee_counter++;
@@ -73,6 +75,7 @@ public class Main {
                         break;
 
                     case 3 :
+
                         car.add(new Cars());
                         car.get(car_counter).set_details();
                         car_counter++;
@@ -83,6 +86,7 @@ public class Main {
                         break;
 
                     case 4 :
+
                         System.out.println("=============================== *** SHOWING SHOWROOM DETAILS *** ==============================");
 
                         for(Showroom shroom : showroom) {
@@ -99,9 +103,10 @@ public class Main {
                         break;
 
                     case 5 :
+
                         System.out.println("=============================== *** SHOWING EMPLOYEE DETAILS *** ==============================");
                         System.out.println();
-                        
+
                         for(Employees emp : employee) {
   
                             emp.get_details();
@@ -116,6 +121,7 @@ public class Main {
                         break;
 
                     case 6 :
+
                         System.out.println("================================= *** SHOWING CAR DETAILS *** =================================");
                         System.out.println();
 
@@ -138,6 +144,5 @@ public class Main {
                 }
             }
         }
-
     }
 }
